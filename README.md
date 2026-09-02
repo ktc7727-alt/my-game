@@ -47,11 +47,11 @@ npm run build    # 타입 검사 + dist/ 생성
 앱으로 만들기 전에, 폰에서 **링크 하나로** 바로 플레이할 수 있게 해 둡니다.
 
 `.github/workflows/deploy.yml` 이 푸시할 때마다 자동으로 빌드해서 올립니다.
-**최초 1회만** 저장소 설정을 바꿔주면 됩니다.
+`configure-pages` 의 `enablement: true` 덕분에 Pages 활성화까지 워크플로가 알아서 합니다.
+저장소 설정을 손으로 만질 필요가 없습니다.
 
-1. GitHub 저장소 → **Settings** → 왼쪽 메뉴 **Pages**
-2. **Source** 를 `Deploy from a branch` 에서 **`GitHub Actions`** 로 변경
-3. 끝. 다음 푸시부터 자동 배포됩니다.
+혹시 권한 문제로 자동 활성화가 막히면, 저장소 → **Settings** → **Pages** →
+**Source** 를 **`GitHub Actions`** 로 바꿔주면 됩니다.
 
 배포 주소:
 
