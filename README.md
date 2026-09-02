@@ -51,11 +51,13 @@ npm run build    # 타입 검사 + dist/ 생성
 **최초 1회만** 저장소 설정을 손으로 바꿔줘야 합니다.
 (워크플로가 대신 켜주는 방법은 GITHUB_TOKEN 권한 밖이라 불가능합니다)
 
-1. GitHub 저장소 → **Settings** → 왼쪽 메뉴 **Pages**
-2. **Build and deployment** 의 **Source** 를 **`GitHub Actions`** 로 변경
-3. **Actions** 탭 → `Deploy to GitHub Pages` → **Re-run all jobs**
+1. 저장소가 **공개(public)** 여야 합니다. 비공개 저장소의 Pages 는 유료 플랜 전용입니다.
+2. GitHub 저장소 → **Settings** → 왼쪽 메뉴 **Pages**
+3. **Build and deployment** 의 **Source** 를 **`GitHub Actions`** 로 변경
 
-이후부터는 푸시할 때마다 자동으로 갱신됩니다.
+이후부터는 **main 에 푸시할 때마다** 자동으로 갱신됩니다.
+`github-pages` 환경이 기본 브랜치에서만 배포를 허용하므로,
+작업 브랜치에서 작업했다면 main 에 합쳐야 배포됩니다.
 
 배포 주소:
 

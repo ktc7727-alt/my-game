@@ -4,9 +4,10 @@ name: Deploy to GitHub Pages
 
 on:
   push:
+    # github-pages 환경은 기본 브랜치에서만 배포를 허용한다.
+    # 다른 브랜치를 넣으면 build 는 통과하고 deploy 만 막혀 실패 알림이 쌓인다.
     branches:
       - main
-      - claude/mobile-game-development-dw69ij
   # Actions 탭에서 손으로 돌릴 수도 있게 해 둔다.
   workflow_dispatch:
 
