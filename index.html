@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>Gem Cascade</title>
+    <!-- viewport-fit=cover + safe-area 로 노치/홈바 기기에서 잘리지 않게 한다 -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <!-- 홈 화면에 추가하면 주소창 없이 앱처럼 실행된다 -->
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <meta name="theme-color" content="#0b1021" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <style>
+      * { box-sizing: border-box; }
+      html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: #0b1021;
+        /* 모바일 웹뷰의 더블탭 확대 / 길게 눌러 선택 / 당겨서 새로고침을 막는다 */
+        touch-action: none;
+        overscroll-behavior: none;
+        -webkit-user-select: none;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+      }
+      #game {
+        width: 100%;
+        height: 100%;
+        padding: env(safe-area-inset-top) env(safe-area-inset-right)
+                 env(safe-area-inset-bottom) env(safe-area-inset-left);
+      }
+      canvas { display: block; }
+      #boot-error {
+        display: none;
+        position: fixed;
+        inset: 0;
+        padding: 24px;
+        color: #ffd8d8;
+        font: 15px/1.6 system-ui, -apple-system, sans-serif;
+        background: #0b1021;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="game"></div>
+    <div id="boot-error"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

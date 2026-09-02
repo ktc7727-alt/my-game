@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#0b1021"/>
+  <!-- maskable 아이콘은 가장자리가 잘릴 수 있어 중앙 60% 안에만 그린다 -->
+  <g transform="translate(256 256)">
+    <rect x="-152" y="-152" width="140" height="140" rx="38" fill="#ff4d6d"/>
+    <rect x="12" y="-152" width="140" height="140" rx="38" fill="#4dd4ff"/>
+    <rect x="-152" y="12" width="140" height="140" rx="38" fill="#ffd166"/>
+    <rect x="12" y="12" width="140" height="140" rx="38" fill="#4ade80"/>
+    <circle cx="-82" cy="-82" r="40" fill="#ffffff" opacity="0.85"/>
+    <path d="M82 -124 L120 -42 L44 -42 Z" fill="#ffffff" opacity="0.85"/>
+    <rect x="-114" y="50" width="64" height="64" rx="14" fill="#ffffff" opacity="0.85"/>
+    <path d="M82 40 L124 82 L82 124 L40 82 Z" fill="#ffffff" opacity="0.85"/>
+  </g>
+</svg>
