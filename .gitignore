@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.DS_Store
+*.log
+
+# Capacitor 가 생성하는 네이티브 프로젝트.
+# 각자 로컬에서 `npx cap add android` / `npx cap add ios` 로 만들어 쓴다.
+/android/
+/ios/
+
+# 서명 키 - 절대 커밋하지 말 것
+*.keystore
+*.jks
+key.properties
+
+# 로컬 검증용 임시 스크립트
+.verify.mjs
