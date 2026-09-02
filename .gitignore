@@ -13,5 +13,7 @@ dist/
 *.jks
 key.properties
 
-# 로컬 검증용 임시 스크립트
+# 로컬 검증용 임시 스크립트 (이 컨테이너 전용 경로에 의존한다)
 .verify.mjs
+.verify-pages.mjs
+.make-icons.mjs
